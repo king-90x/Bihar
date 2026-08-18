@@ -1,0 +1,174 @@
+/* =========================================================
+   RESPONSIVE OVERRIDES
+   Append this block to the END of style.css
+   Breakpoints: max-width 1400px / 800px / 500px
+   (kept in this order so later blocks win on overlap)
+   ========================================================= */
+
+/* =================================================
+   ≤ 1400px — large screens / laptops
+   Slightly tighten hero decor, section padding, timeline width
+   ================================================= */
+@media (max-width: 1400px){
+  .section-pad{padding:5rem 0;}
+
+  .chakra-wrap{width:520px; height:520px; right:-8%;}
+  .hero-glow{width:760px; height:760px;}
+
+  .hero h1{font-size:clamp(2.6rem, 7vw, 5.6rem);}
+  .hero p.lead{font-size:1.08rem; max-width:34rem;}
+
+  .timeline{max-width:760px;}
+
+  .heritage-img-wrap{height:210px;}
+
+  .flip-card{height:260px;}
+}
+
+/* =================================================
+   ≤ 800px — tablets / small laptops
+   Stack hero content, simplify chakra, single-column stat/nav
+   ================================================= */
+@media (max-width: 800px){
+  .section-pad{padding:3.75rem 0;}
+  .section-head{margin-bottom:2.5rem;}
+  .section-head h2{font-size:clamp(1.7rem, 5vw, 2.2rem);}
+
+  /* Navbar */
+  
+  .navbar-bihar{padding:.6rem 0;
+    ;}
+  .navbar-bihar .navbar-brand{font-size:1.3rem;}
+  #navMenu{
+    background:rgba(16,12,42,.97);
+    border-radius:10px;
+    margin-top:.6rem;
+    padding:.5rem .75rem;
+  }
+  .navbar-bihar .nav-link{margin:.15rem 0; text-align:center;}
+
+  /* Hero */
+  .hero{min-height:88vh; text-align:center;}
+  .hero-content .row{justify-content:center;}
+  .hero-content .col-lg-8{max-width:100%;}
+  .hero h1{font-size:clamp(2.3rem, 9vw, 3.6rem);}
+  .hero h1 .latin{font-size:1rem; letter-spacing:.3em;}
+  .hero p.lead{margin-left:auto; margin-right:auto; font-size:1rem;}
+  .chakra-wrap{width:380px; height:380px; right:-30%; opacity:.4; display: none;} 
+  .hero .btn-marigold{margin-left:auto; margin-right:auto;}
+  .chakra{
+    display: none;
+  }
+  .hero-glow{
+    display: none;
+  }
+
+  /* About / stats */
+  .stat-box{padding:1.2rem .5rem; border-right:none; border-bottom:1px solid var(--gold-line);}
+  .stat-box:nth-child(2n){border-right:none;}
+  .stat-box:last-child, .stat-box:nth-last-child(2){border-bottom:none;}
+  .stat-num{font-size:2.1rem;}
+  .stat-label{font-size:.66rem;}
+
+  /* Timeline */
+  .timeline{padding-left:2rem;}
+  .t-item{padding:0 0 2rem 1.2rem;}
+  .t-item::before{left:-2rem; width:14px; height:14px;}
+  .t-item h4{font-size:1.25rem;}
+  .t-item p{font-size:.94rem;}
+
+  /* Heritage cards */
+  .heritage-img-wrap{height:190px;}
+  .heritage-body{padding:1.2rem 1.3rem 1.4rem;}
+  .heritage-body h5{font-size:1.2rem;}
+
+  /* Culture cards */
+  .art-card{padding:1.6rem 1.3rem;}
+
+  /* Festival flip cards */
+  .flip-card{height:230px;}
+  .flip-front i{font-size:2rem;}
+  .flip-front h5{font-size:1.1rem;}
+
+  /* Cuisine */
+  .dish-card img{height:150px;}
+
+  /* Language chips */
+  .lang-chip{padding:.5rem 1.1rem; font-size:.8rem;}
+
+  /* Footer */
+  footer{padding:2.75rem 0 1.25rem; text-align:center;}
+  footer .col-lg-4, footer .col-lg-2{margin-bottom:1.5rem;}
+  .social-ic{margin:0 .35rem;}
+}
+
+/* =================================================
+   ≤ 500px — phones
+   Full single-column layout, compact type, smaller decor
+   ================================================= */
+@media (max-width: 500px){
+  .section-pad{padding:3rem 0;}
+  .section-head h2{font-size:1.6rem;}
+  .eyebrow{font-size:.66rem; letter-spacing:.2em;}
+
+  /* Navbar */
+  .navbar-brand{font-size:1.2rem;}
+
+  /* Hero */
+  .hero{min-height:82vh; padding-top:5rem;}
+  .hero-glow{width:520px; height:520px;}
+  .chakra-wrap{width:260px; height:260px; right:-38%; opacity:.3;}
+  .hero h1{font-size:clamp(2rem, 12vw, 2.8rem);}
+  .hero h1 .latin{font-size:.85rem; letter-spacing:.22em; margin-top:.5rem;}
+  .hero p.lead{font-size:.92rem;}
+  .hero .btn-marigold{width:100%; text-align:center;}
+  .scroll-cue{font-size:.62rem; bottom:1.4rem;}
+
+  /* About / stats */
+  .stat-box{padding:1rem .4rem;}
+  .stat-num{font-size:1.7rem;}
+  .stat-label{font-size:.6rem; letter-spacing:.08em;}
+
+  /* Timeline */
+  .timeline{padding-left:1.6rem;}
+  .t-item{padding:0 0 1.8rem 1rem;}
+  .t-item::before{left:-1.6rem; width:12px; height:12px;}
+  .t-item .t-year{font-size:.75rem;}
+  .t-item h4{font-size:1.1rem;}
+  .t-item p{font-size:.88rem;}
+
+  /* Heritage cards — single column, shorter image */
+  .heritage-img-wrap{height:200px;}
+  .heritage-body{padding:1.1rem 1.15rem 1.3rem;}
+  .heritage-body h5{font-size:1.1rem;}
+  .heritage-body p{font-size:.85rem;}
+
+  /* Culture cards */
+  .art-card{padding:1.4rem 1.2rem; text-align:center;}
+  .art-card .art-icon{margin-left:auto; margin-right:auto;}
+
+  /* Festival flip cards — tap-friendly, slightly shorter */
+  .flip-card{height:210px;}
+  .flip-front h5{font-size:1rem;}
+  .flip-back p{font-size:.8rem;}
+
+  /* Cuisine */
+  .dish-card img{height:160px;}
+  .dish-body{padding:1.1rem 1.1rem;}
+  .dish-body h5{font-size:1.05rem;}
+  .dish-body p{font-size:.85rem;}
+
+  /* Language chips */
+  .lang-chip{padding:.45rem .95rem; font-size:.75rem; margin:.25rem;}
+
+  /* CTA */
+  .cta-section .btn-marigold{width:100%;}
+
+  /* Footer */
+  footer{padding:2.25rem 0 1rem;}
+  footer h6{font-size:1.05rem;}
+  .social-ic{width:34px; height:34px;}
+
+  /* Back to top — smaller, safe corner */
+  #backTop{width:40px; height:40px; right:1rem; bottom:1rem;}
+}
